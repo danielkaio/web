@@ -1,4 +1,63 @@
-$cor:gray;
-body {
-    background-color: $cor;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background-color: navy;
+}
+
+.menu li {
+    list-style-type: none;
+    padding: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: whitesmoke;
+    border-bottom: 1px black solid;
+    text-align: center;
+}
+
+.btn-menu {
+    display: none;
+}
+
+.ativo {
+    display: block;
+}
+
+@media(max-width:600px) {
+    .btn-menu {
+        display: block;
+        background: none;
+        border: none;
+    }
+    .menu {
+        display: block;
+        background-color: crimson;
+    }
+    .ativo.menu {
+        display: none;
+    }
+    .menu li a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.btn-menu::before {
+    display: block;
+    width: 60px;
+    content: url("../img/134216_menu_lines_hamburger_icon.svg");
+}
+
+.menu li a:hover {
+    display: block;
+    color: black;
 }
